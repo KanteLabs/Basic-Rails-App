@@ -4,8 +4,9 @@
     <ul>
         <% @entries.each do |entry| %>
             <li>
-                <h1> <%= entry.title %> </h1>
+                <h2> <%= entry.title %> </h2>
                 <p> <%= entry. description %> </p>
+                <a href="/entries/<%=entry.id%>">View Entry </a>
             </li>
         <% end %>
     </ul>
