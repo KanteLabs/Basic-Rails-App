@@ -1,0 +1,12 @@
+<h1>Todo List</h1>
+
+<div>
+    <ul>
+        <% @entries.each do |entry| %>
+            <li>
+                <h1> <%= entry.title %> </h1>
+                <p> <%= entry. description %> </p>
+            </li>
+        <% end %>
+    </ul>
+</div>
