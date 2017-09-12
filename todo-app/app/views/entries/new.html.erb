@@ -1,0 +1,7 @@
+  <%= form_for :entry, method: 'post', url: {action: 'create'} do |f| %>
+    <%= label(:entry, :title) %>
+    <%= f.text_field :title %><br>
+    <%= label(:entry, :description) %>
+    <%= f.text_field :description %><br>
+    <%= f.submit "Add New Entry" %>
+  <% end %>

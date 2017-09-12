@@ -7,11 +7,15 @@ class EntriesController < ApplicationController
         @entry = Entry.find_by(id: params[:id])
     end
 
+    def new
+
+    end
+
     def create
         entry = params['entry']
         Entry.create(
-            title: Entry[:title],
-            description: Entry[:description]
+            title: entry[:title],
+            description: entry[:description]
         )
         redirect_to entries_path
     end
