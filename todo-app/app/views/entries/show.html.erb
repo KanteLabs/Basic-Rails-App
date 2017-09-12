@@ -2,3 +2,12 @@
     <h1> <%=@entry.title %> </h1>
     <h3> <%=@entry.description %> </h3>
 </div>
+<div>
+  <%= form_for :entry, method: 'patch', url: {action: 'update'} do |f| %>
+    <%= label(:entry, :title) %>
+    <%= f.text_field :title %><br>
+    <%= label(:entry, :description) %>
+    <%= f.text_field :description %><br>
+    <%= f.submit "Save" %>
+  <% end %>
+  </div>

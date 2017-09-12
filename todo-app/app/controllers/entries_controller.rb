@@ -21,10 +21,11 @@ class EntriesController < ApplicationController
     end
 
     def update
-        Entry.create(
+        entry = params['entry']
+        Entry.update(
             params[:id],
-            title: Entry[:title],
-            description: Entry[:description]
+            title: entry[:title],
+            description: entry[:description]
         )
         redirect_to entries_path            
     end
